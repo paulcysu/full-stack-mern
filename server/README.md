@@ -57,6 +57,14 @@
     git remote add heroku <LINK>
     git push heroku master
 
+5. If changes, add and push to Heroku from master branch
+
+    git checkout master
+    git pull origin master
+    git add .
+    git commit -am 'message'
+    git push heroku master
+
 ## Notes
 
 #Node - Javascript runtime - used to execute code outside the browser
@@ -78,3 +86,7 @@
 
 Request from Browser -> Port -> Node -> Uses Express -> Select correct Route -> Send back Response -> Express -> Node -> Port -> Browser
 
+# Passport
+
+Passport - a helper for handling auth in Express apps
+Passport Strategy - helpers for auth w/ specific provider (like: Google, FB, etc)
