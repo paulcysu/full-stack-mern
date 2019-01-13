@@ -48,6 +48,15 @@
         "start": "node index.js",
     }
 
+4. Download Heroku CLI and create account
+
+    brew install heroku/brew/heroku
+    heroku -v
+    heroku login
+    heroku create
+    git remote add heroku <LINK>
+    git push heroku master
+
 ## Notes
 
 #Node - Javascript runtime - used to execute code outside the browser
