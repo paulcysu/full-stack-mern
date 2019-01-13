@@ -9,4 +9,8 @@ app.get('/', (req, res) => {
     res.send('Hi, there!')
 });
 
-app.listen(5000);
+// listen to see if there a port to be used (used this for Heroku, because it gives PORT in last second)
+const PORT = process.env.PORT || 5000
+
+// listen to PORT in argument
+app.listen(PORT);

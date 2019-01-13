@@ -1,6 +1,7 @@
 ## Instructions for building a server
 
-1.  
+1. Make server
+
     mkdir server && cd server
     npm init
     npm i --save express
@@ -16,8 +17,36 @@
         res.send('Hi, there!')
     });
 
-    // tell app to listen to port 5000
+    // use this instead if Heroku
+    const PORT = process.env.PORT || 5000
+
+    // tell app to listen to port Heroku or port 5000
     app.listen(5000);
+
+3. Turn on server
+
+    node index.js
+
+4. View localhost:<PORT>
+
+## Heroku Setup
+
+1. Make to to have server listening to:
+
+    const PORT = process.env.PORT
+
+2. Specify which version of node and npm Heroku needs: (in package.json)
+
+    "engines": {
+        "node": "8.1.1",
+        "npm": "5.0.3"
+    },
+
+3. Tell Heroku the script to run to start server
+
+    "scripts": {
+        "start": "node index.js",
+    }
 
 ## Notes
 
